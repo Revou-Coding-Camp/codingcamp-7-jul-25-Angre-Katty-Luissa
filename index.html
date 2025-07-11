@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo - Angre</title>
-
-    <!-- CSS External-->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+  <link rel="stylesheet" href="css\style.css" />
 </head>
-
 <body>
-    <!-- Hero Website-->
-    <header>
-        <h1>Todo List</h1>
+  <div class="container">
+    <h1>Todo List</h1>
 
-    </header>
+    <div class="actions">
+      <input type="text" id="searchInput" placeholder="Search task..." />
+      <select id="statusFilter">
+        <option value="all">All Status</option>
+        <option value="pending">Pending</option>
+        <option value="done">Done</option>
+      </select>
+      <input type="date" id="filterDateInput" />
+      <button id="filterBtn">Filter</button>
+      <button id="deleteAllBtn">Delete All</button>
+    </div>
 
-    <main></main>
+    <div class="form">
+      <input type="text" id="taskInput" placeholder="Add a todo..." />
+      <input type="date" id="dateInput" />
+      <button id="addBtn">+</button>
+    </div>
 
-    <footer>
-        <span>2025. By Angre Katty Luissa.</span>
-    </footer>
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="todoList">
+        <tr><td colspan="4">No task found</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    2025. By Angre Katty Luissa
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
-
 </html>
